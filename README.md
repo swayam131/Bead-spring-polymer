@@ -8,4 +8,4 @@ Python Script 2 (contact_frequency_to_contact_probability.ipynb): Uses the Hi-C 
 
 Coarse-grain bead-spring simulation:
 
-The LAMMPS input and data files are used to simulate the chromatin's three-dimensional structure based on the given 2D Hi-C contact map.
+The LAMMPS input (in.main_2) and data files (data_nonoverlap_2.cfg) are used to simulate the chromatin's three-dimensional structure based on the given 2D Hi-C contact map.
