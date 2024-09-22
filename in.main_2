@@ -1,0 +1,81 @@
+#LAMMPS INPUT FILE
+
+#VARIABLES
+variable t equal 1.0000
+variable trun equal 10000000
+variable tstart equal 100000
+variable dump equal 100000
+variable tdump equal 100000
+variable dt equal 0.0010
+variable sd equal 1365
+variable gamma equal v_t
+variable rskin equal 2.0000
+variable rproc equal 3.5
+variable wxlo equal -294.50000
+variable wxhi equal 294.50000
+variable wylo equal -294.50000
+variable wyhi equal 294.50000
+variable wzlo equal -1.00000
+variable wzhi equal 588.00000
+variable ke equal 0.05000*v_t	
+variable re equal 0.0000
+variable kfene equal 30.0000*v_t
+variable rfene equal 1.5000
+variable lp equal 1.8000
+variable kb equal v_lp*v_t
+variable N equal 587
+
+#STYLES
+boundary p p p
+atom_style bond
+bond_style hybrid fene harmonic 
+pair_style lj/cut 1.12
+pair_modify shift yes
+#SETTINGS
+neighbor ${rskin} bin
+comm_modify cutoff ${rproc}
+
+#INPUT DATA
+read_data data_nonoverlap_2.cfg
+ 
+special_bonds fene angle no dihedral no
+bond_coeff 1 fene ${kfene} ${rfene} 1.0000 1.0000
+bond_coeff 2 harmonic $(v_ke*0.9801) 1.000000
+bond_coeff 3 harmonic $(v_ke*0.9025) 1.000000
+bond_coeff 4 harmonic $(v_ke*0.8100) 1.000000
+bond_coeff 5 harmonic $(v_ke*0.7225) 1.000000
+bond_coeff 6 harmonic $(v_ke*0.6400) 1.000000
+bond_coeff 7 harmonic $(v_ke*0.5625) 1.000000
+bond_coeff 8 harmonic $(v_ke*0.4900) 1.000000
+bond_coeff 9 harmonic $(v_ke*0.4225) 1.000000
+bond_coeff 10 harmonic $(v_ke*0.3600) 1.000000
+bond_coeff 11 harmonic $(v_ke*0.3025) 1.000000
+bond_coeff 12 harmonic $(v_ke*0.2500) 1.000000
+bond_coeff 13 harmonic $(v_ke*0.2025) 1.000000
+bond_coeff 14 harmonic $(v_ke*0.1600) 1.000000
+bond_coeff 15 harmonic $(v_ke*0.1225) 1.000000
+bond_coeff 16 harmonic $(v_ke*0.0900) 1.000000
+bond_coeff 17 harmonic $(v_ke*0.0625) 1.000000
+bond_coeff 18 harmonic $(v_ke*0.0400) 1.000000
+bond_coeff 19 harmonic $(v_ke*0.0225) 1.000000
+bond_coeff 20 harmonic $(v_ke*0.0100) 1.000000
+pair_coeff 1 1 1.0000 1.0000 1.1225 
+
+#DYNAMICS_SETTUP
+fix nve_fix all nve
+fix lan_fix all langevin ${t} ${t} ${gamma} ${sd}
+thermo ${tdump}
+timestep ${dt}
+
+#RUN FEW STEPS TO LEAVE INITIAL CONFIGURATION
+run ${tstart}
+
+#SET DUMP
+dump 1 all custom 50 poly_wt_5.lammpstrj id mol type x y z
+
+#DYNAMICS_RUN
+run ${trun}
+
+#END
+write_data data_final.cfg nocoeff
+
