@@ -41,10 +41,10 @@ This command initiates the simulation and redirects the output to the log file f
 
 The kinetic model calculates gene expression by calculating the cluster size of promoter by modeling the rates of binding and unbinding interactions between enhancers and promoters, as derived from the 3D chromatin structure.
 
-### Key File:
+### Key Files:
 
 Kinetic_model_sox9_wildtype: MATLAB script implementing the kinetic model.
-Binding_rate.csv and Unbinding_rate.csv: Cluster dependent rates of enhancers with promoter
+rates_binding_finale.csv and rates_unbinding_finale.csv: Enhancer binding and unbinding rates with promoter
 
 ### Running the Kinetic Model:
 
