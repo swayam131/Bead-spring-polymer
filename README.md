@@ -37,7 +37,7 @@ poly.data: Data file containing simulation parameters and chromatin configuratio
 
 This command initiates the simulation and redirects the output to the log file for monitoring.
 
-#### 2. Kinetic Model
+### 2. Kinetic Model
 
 The kinetic model calculates gene expression by calculating the cluster size of promoter by modeling the rates of binding and unbinding interactions between enhancers and promoters, as derived from the 3D chromatin structure.
 
