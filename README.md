@@ -1,48 +1,52 @@
-Reconstructing Chromatin 3D Structure and Modeling Gene Expression
+# Chromatin 3D Structure and Gene Expression Analysis
 
-Overview
+This project reconstructs the 3D structure of chromatin from HiC contact maps using a Bead-Spring Polymer model. It also predicts gene expression levels by analyzing enhancer-promoter (E-P) interactions through a kinetic model.
 
-This project aims to reconstruct the three-dimensional structure of chromatin from HiC contact maps using a Coarse-grain Bead-Spring Polymer model. Additionally, it determines gene expression levels based on the binding and unbinding rates of Enhancer-Promoter (E-P) interactions derived from the 3D chromatin conformation, utilizing a kinetic model.
+## Features
+- Simulates chromatin 3D conformations using a Bead-Spring Polymer model.
+- Computes gene expression based on enhancer-promoter interactions.
+- Compatible with LAMMPS for simulations and MATLAB for kinetic modeling.
+
 ## Getting Started
 
 ### Prerequisites
-- [LAMMPS](https://lammps.org) installed for simulations.
-- [MATLAB R2022a](https://www.mathworks.com/products/matlab.html) for the kinetic model.
+- [LAMMPS](https://lammps.org) install lammps for md simulation.
+- [MATLAB R2022a](https://www.mathworks.com/products/matlab.html) for the kinetic model simulation.
 
 ### Installation
 1. Clone the repository:
    ```bash
    git clone https://github.com/ss131/Bead-spring-polymer.git
 
-Workflow
+### Workflow
 
-1. Coarse-Grain Bead-Spring Polymer Model
+### 1. Coarse-Grain Bead-Spring Polymer Model
 
 The Bead-Spring Polymer model simulates the chromatin structure for the 6MB Sox9-Kcnj2 loci of the mESC wildtype cell line. This is achieved using the LAMMPS simulation package.
 
-Key Files:
+### Key Files:
 
 in.run: Input file for LAMMPS simulations.
 
 poly.data: Data file containing simulation parameters and chromatin configurations.
 
-Running the Simulation:
-
-To execute the LAMMPS simulation, use the following command:
-
-lmp_serial -in in.run > log &
+### Running the Bead-Spring Polymer Model
+1. Navigate to the project folder.
+2. Execute the simulation using LAMMPS through command line:
+   lmp_serial -in in.run > log &
 
 This command initiates the simulation and redirects the output to the log file for monitoring.
 
-2. Kinetic Model
+#### 2. Kinetic Model
 
-The kinetic model calculates gene expression levels by modeling the rates of binding and unbinding interactions between enhancers and promoters, as derived from the 3D chromatin structure.
+The kinetic model calculates gene expression by calculating the cluster size of promoter by modeling the rates of binding and unbinding interactions between enhancers and promoters, as derived from the 3D chromatin structure.
 
-Key File:
+### Key File:
 
 Kinetic_model_sox9_wildtype: MATLAB script implementing the kinetic model.
+Binding_rate.csv and Unbinding_rate.csv: Cluster dependent rates of enhancers with promoter
 
-Running the Kinetic Model:
+### Running the Kinetic Model:
 
 This script is developed in MATLAB R2022a. It can be executed either through the MATLAB GUI or via the command line prompt.
 
@@ -56,7 +60,7 @@ Run the script using the following command:
 
 matlab -nodisplay -nosplash -r "run('Kinetic_model_sox9_wildtype'); exit;"
 
-Notes
+### Notes
 
 Ensure LAMMPS and MATLAB are installed and properly configured on your system before running the simulations and kinetic model.
 
