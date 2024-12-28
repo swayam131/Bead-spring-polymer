@@ -1,4 +1,4 @@
-# Chromatin 3D Structure and Gene Expression Analysis
+# Chromatin 3D Structure and Gene Expression Simulation
 
 This project reconstructs the 3D structure of chromatin from HiC contact maps using a Bead-Spring Polymer model. It also predicts gene expression levels by analyzing enhancer-promoter (E-P) interactions through a kinetic model.
 
