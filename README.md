@@ -13,10 +13,7 @@ This project reconstructs the 3D structure of chromatin from HiC contact maps us
 - [LAMMPS](https://lammps.org) install lammps for md simulation.
 - [MATLAB R2022a](https://www.mathworks.com/products/matlab.html) for the kinetic model simulation.
 
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ss131/Bead-spring-polymer.git
+
 
 ### Workflow
 
