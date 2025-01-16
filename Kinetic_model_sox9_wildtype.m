@@ -10,8 +10,8 @@ opts = delimitedTextImportOptions("NumVariables", 16);
 opts.DataLines = [2, Inf];
 opts.Delimiter = " ";
 
-opts.VariableNames = ["cl", "r", "aij", "bij", "r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8", "r9", "r10", "r11", "r12", "r13"];
-opts.VariableTypes = ["double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double"];
+opts.VariableNames = ["cl", "r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8", "r9", "r10", "r11", "r12", "r13"];
+opts.VariableTypes = ["double","double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double", "double"];
 
 opts.ExtraColumnsRule = "ignore";
 opts.EmptyLineRule = "read";
@@ -21,35 +21,33 @@ ratesbindingfinale = readtable("rates_binding_finale.csv", opts);
 ratesunbindingfinale = readtable("rates_unbinding_finale.csv", opts);
 clear opts
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%for sox9%%%%%%%%%%%%%%%
-ep20=table2array(ratesbindingfinale(:,3));
-ep21=table2array(ratesbindingfinale(:,4));
-ep22=table2array(ratesbindingfinale(:,5));
-ep23=table2array(ratesbindingfinale(:,6));
-ep24=table2array(ratesbindingfinale(:,7));
-ep25=table2array(ratesbindingfinale(:,8));
-ep26=table2array(ratesbindingfinale(:,9));
-ep27=table2array(ratesbindingfinale(:,10));
-ep28=table2array(ratesbindingfinale(:,11));
-ep29=table2array(ratesbindingfinale(:,12));
-ep210=table2array(ratesbindingfinale(:,13));
-ep211=table2array(ratesbindingfinale(:,14));
-ep212=table2array(ratesbindingfinale(:,15));
-ep213=table2array(ratesbindingfinale(:,16));
+ep21=table2array(ratesbindingfinale(:,2));
+ep22=table2array(ratesbindingfinale(:,3));
+ep23=table2array(ratesbindingfinale(:,4));
+ep24=table2array(ratesbindingfinale(:,5));
+ep25=table2array(ratesbindingfinale(:,6));
+ep26=table2array(ratesbindingfinale(:,7));
+ep27=table2array(ratesbindingfinale(:,8));
+ep28=table2array(ratesbindingfinale(:,9));
+ep29=table2array(ratesbindingfinale(:,10));
+ep210=table2array(ratesbindingfinale(:,11));
+ep211=table2array(ratesbindingfinale(:,12));
+ep212=table2array(ratesbindingfinale(:,13));
+ep213=table2array(ratesbindingfinale(:,14));
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-epub20=table2array(ratesunbindingfinale(:,3));
-epub21=table2array(ratesunbindingfinale(:,4));
-epub22=table2array(ratesunbindingfinale(:,5));
-epub23=table2array(ratesunbindingfinale(:,6));
-epub24=table2array(ratesunbindingfinale(:,7));
-epub25=table2array(ratesunbindingfinale(:,8));
-epub26=table2array(ratesunbindingfinale(:,9));
-epub27=table2array(ratesunbindingfinale(:,10));
-epub28=table2array(ratesunbindingfinale(:,11));
-epub29=table2array(ratesunbindingfinale(:,12));
-epub210=table2array(ratesunbindingfinale(:,13));
-epub211=table2array(ratesunbindingfinale(:,14));
-epub212=table2array(ratesunbindingfinale(:,15));
-epub213=table2array(ratesunbindingfinale(:,16));
+epub21=table2array(ratesunbindingfinale(:,2));
+epub22=table2array(ratesunbindingfinale(:,3));
+epub23=table2array(ratesunbindingfinale(:,4));
+epub24=table2array(ratesunbindingfinale(:,5));
+epub25=table2array(ratesunbindingfinale(:,6));
+epub26=table2array(ratesunbindingfinale(:,7));
+epub27=table2array(ratesunbindingfinale(:,8));
+epub28=table2array(ratesunbindingfinale(:,9));
+epub29=table2array(ratesunbindingfinale(:,10));
+epub210=table2array(ratesunbindingfinale(:,11));
+epub211=table2array(ratesunbindingfinale(:,12));
+epub212=table2array(ratesunbindingfinale(:,13));
+epub213=table2array(ratesunbindingfinale(:,14));
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%for kcnj2%%%%%%%%%%%%%%%%
