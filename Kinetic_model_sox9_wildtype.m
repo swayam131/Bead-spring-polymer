@@ -87,7 +87,7 @@ for nj=1:1
     tote2=0;
     adpol1=0;adpol2=0; rempol1=0; rempol2=0; adpolep1=0;adpolep2=0;time=0;
     pp=0;
-    vv='reading_wt_onepointfive'+string(cmax)+string(nj)+'.csv'
+    vv='reading_wt'+string(cmax)+string(nj)+'.csv'
     fileID4=fopen(vv,'w');
     for i=1:runs
         %%%%%%%%%%%%%%%%
