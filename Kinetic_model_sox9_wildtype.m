@@ -58,8 +58,8 @@ epub1=zeros(1,e_no);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 epp1={ep1,ep1,ep1,ep1,ep1,ep1,ep1,ep1,ep1,ep1,ep1,ep1,ep1}; 
 eppub1={epub1,epub1,epub1,epub1,epub1,epub1,epub1,epub1,epub1,epub1,epub1,epub1,epub1};
-epp2={ep20,ep21,ep22,ep23,ep24,ep25,ep26,ep27,ep28,ep29,ep210,ep211,ep212,ep213};
-eppub2={epub20,epub21,epub22,epub23,epub24,epub25,epub26,epub27,epub28,epub29,epub210,epub211,epub212,epub213};
+epp2={ep21,ep22,ep23,ep24,ep25,ep26,ep27,ep28,ep29,ep210,ep211,ep212,ep213};
+eppub2={epub21,epub22,epub23,epub24,epub25,epub26,epub27,epub28,epub29,epub210,epub211,epub212,epub213};
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
